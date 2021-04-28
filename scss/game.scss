@@ -10,7 +10,12 @@ $background_forest: url(../img/forest/Layer_1.png),
                     url(../img/forest/Layer_10.png),
                     url(../img/forest/Layer_11.png) ;
 
-
+$demon_basic: url(../dist/img/characters/demon-Files/GIFS/demon-idle.gif);
+$skull_basic: url(../dist/img/characters/Fire-Skull-Files/GIF/fire-skull.gif);
+$ghost_basic: url(../dist/img/characters/Ghost-Files/GIFS/ghost-idle.gif);
+$hunter_basic: url(../dist/img/characters/Gothic-hero-Files/GIFS/gothic-hero-idle.gif);
+$hound_basic: url(../dist/img/characters/Hell-Hound-Files/GIFS/hell-hound-idle.gif);
+$horse_basic: url(../dist/img/characters/Nightmare-Files/GIFS/nightmare-idle.gif);
 
 
 body{
@@ -38,6 +43,24 @@ body{
     background-position: 0px 0px;
     background-size: 100vw 100%;
     animation: goRight 20s linear infinite;
+}
+
+.hero_basic{
+    position: absolute;
+    width: 25vw;
+    height: 25vh;
+    left:0px;
+    bottom: 0px;
+    
+}
+.villain_basic{
+    position: absolute;
+    width: 30vw;
+    height: 30vh;
+    right:0px;
+    bottom: 0px;
+    scale: -1 ;
+    
 }
 
 @keyframes goRight {
