@@ -1,1 +1,0 @@
-//TODO The fire at the top of the hero its the life, so every time he loses the image of the fire goes smaller

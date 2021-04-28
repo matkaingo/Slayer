@@ -16,6 +16,10 @@ $background_forest: url(../img/forest/Layer_1.png),
 $ghost_color: #f5f5f5;
 $ghost_shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px         #F90, 0px -20px 40px #C33;
 
+$dark_tile: url(../img/tiles/Dirt_Tile.png);
+$player_x: url(../img/characters/xposition.gif);
+$player_o: url(../img/characters/Ghost-Files/GIFS/ghost-idle.gif);
+
 
 body{
     margin: 0;
@@ -27,12 +31,48 @@ body{
         font-family: 'Press Start 2P', cursive;
     }
 
+    h3{
+        visibility: hidden;
+    }
+
 }
 
 .level_1{
     position: relative;
     width: 100vw;
     height: 100vh;
+}
+
+.tile{
+    background-image: $dark_tile;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 10px;
+    
+    
+}
+
+.container > img{
+    display: block;
+}
+
+.container > div{
+    height: 150px;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+}
+
+.container div{
+    width: 28vw;
+    height: 20vh;
 }
 
 
@@ -45,6 +85,7 @@ body{
     background-size: 100vw 100%;
     animation: goRight 20s linear infinite;
 }
+
 
 .hero{
     position: absolute;
@@ -92,16 +133,13 @@ body{
     
 }
 
-.tiles{
-    position: absolute;
-    width: 100vw;
-    height: 70vh;
-    
-}
+
 .tictactoe{
-    position: static;
-    width: 100vw;
+    position: absolute;
+    width: 85vw;
     height: 70vh;
+    left: 25px;
+    top: 41px;
     
     
 }
@@ -111,7 +149,7 @@ body{
     width: 30vw;
     height: 30vh;
     font-size: 150%;
-    right:35%;
+    right:40%;
     bottom:0px;
     text-align: center;
 
@@ -127,21 +165,21 @@ body{
 
 }
 
-.x_test{
-    position:absolute;
-    width: 100vw;
-    height: 100vw;
-    top: 100px;
-    left: 50px;
+.playerX{
+    background-image: $player_x;
+    align-items: center;
+    width: 20%;
+    height: 20%;
 }
 
-.o_test{
-    position:absolute;
-    width: 100vw;
-    height: 100vw;
-    top: 40px;
-    left: 170px;
+.playerO{
+    background-image: $player_o;
+    align-items: center;
+    width: 20%;
+    height: 20%;
 }
+
+
     
 
 @keyframes goRight {
