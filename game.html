@@ -6,16 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <script src="./dist/scripts/js/main.js" type="module"></script>
-    <link rel="stylesheet" href="./dist/css/game.min.css"
+    <link rel="stylesheet" href="./dist/css/game.min.css">
+    <script src="./dist/scripts/js/nav.js" language="javascript" type="text/javascript"></script>
 </head>
 <body>
     
-    <div class="level_1">
-        
-        <audio autoplay loop>
-            <source src="./dist/audio/forest.mp3" type="audio/mp3">
-        </audio>
+    <!--Splash-->
+    <section id="splash">
+        <a><img src="./imgs/Logo.png" alt="Logo"></a> 
+    </section>  
+    <!--menu -->
+    <section id="menu" class="ocultar">
+
+        <div class="background_1"></div>
+                <audio autoplay loop>
+                    <source src="./dist/audio/forest.mp3" type="audio/mp3">
+                </audio>
+
+                <section class="main-content"> 
+                    <div class="monsters_left">
+                        <p>Slayed</p>
+                        <p1> Opciones</p1>
+                        <br>
+                        <button href="javascript:void(0);" id="btn_play"> Play</button>
+                        <br>
+                        <button href="javascript:void(0);" id="btn_creditos"> Creditos</button>
+                    </div>
+                
+                </section>
+       </div>
+    </section>
+       
+    <!--Nivel 1-->
+    <section class="level_1" class="ocultar">
         <div class="background_1">
+            <div class="container"><!--Volver al menu-->
+                <nav> 
+                <button id="btn_volver" class="volver"> Volver </button>
+                </nav>
+            </div>
+            
+            <audio autoplay loop>
+                <source src="./dist/audio/forest.mp3" type="audio/mp3">
+            </audio>
+        
             
             <div class="tictactoe">
                 
@@ -46,12 +80,37 @@
                 <p>Slayed</p>
                 <div class="monsters_left_number">
                     <p>4</p>
-                </div>
-                
+                </div>  
             </div>
-            
         </div>
-    </div>
-    
+    </section>
+        <!--creditos -->
+        <section id="creditos" class="ocultar">
+            <div class="background_1">
+                <div class="container"><!--Volver al menu-->
+                    <nav> 
+                    <button id="btn_volver" class="volver"> Volver </button>
+                    </nav>
+                </div>
+     
+                <audio autoplay loop>
+                    <source src="./dist/audio/forest.mp3" type="audio/mp3">
+                </audio>
+ 
+               <section class="main-content"> 
+                   <div class="monsters_left">
+                        <p>Slayed</p>
+                        <h1> Creditos:</h1>
+                        <br>
+                        <p2> Daniel Cadavid Duque</p2><br>
+                        <p2> daniel.cadavidd@upb.edu.co</p2><br>
+                        <p2> Mateo Gomez</p2><br>
+                        <p2> mateo.....@upb.edu.co</p2><br>
+                        <p2> Mateo</p2><br>
+                        <p2> mateo.....@upb.edu.co</p2><br>
+                    </div>                   
+                </section>
+           </div>
+        </section>
 </body>
 </html>

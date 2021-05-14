@@ -31,16 +31,21 @@ body{
         font-family: 'Press Start 2P', cursive;
     }
 
+
     h3{
         visibility: hidden;
     }
 
 }
 
+
 .level_1{
     position: relative;
     width: 100vw;
     height: 100vh;
+}
+.ocultar{
+    display: none;
 }
 
 .tile{
@@ -154,6 +159,7 @@ body{
     text-align: center;
 
 }
+
 .monsters_left_number{
     position: absolute;
     width: 30vw;
