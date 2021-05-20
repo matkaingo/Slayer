@@ -9,16 +9,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
 
     function clickOutcome(e){
+        
         const squareArray = Array.from(squares);
         const event = e.target;
         const index = squareArray.indexOf(event);
         playerDisplay.innerHTML = currentPlayer;
 
+        
+        console.log(index)
+
         if(currentPlayer === "playerX"){
-            squares[index].classList.add('playerX');
+            squares[index].classList.replace('playerX');
             currentPlayer = 'playerO';
         }else{
-            squares[index].classList.add('playerO');
+            squares[index].classList.replace('playerO');
             currentPlayer = "playerX";
         }
     }

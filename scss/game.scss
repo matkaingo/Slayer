@@ -209,6 +209,7 @@ body{
 }
 
 .playerX{
+    //background-color: #B5F92D;
     background-image: $player_x;
     align-items: center;
     width: 20%;
@@ -217,6 +218,7 @@ body{
 
 .playerO{
     background-image: $player_o;
+    //background-color: #F9742D;
     align-items: center;
     width: 20%;
     height: 20%;
