@@ -57,8 +57,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 }else{
                     if(position1=="y"){
                         document.getElementById("win").textContent="SLAYED";
-                    }else{
-                        document.getElementById("win").textContent="Tie";
                     }
                 }
                 break
