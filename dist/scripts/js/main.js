@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
        
 
         if(GAME_STATE[index]=="i"){
-            console.log(index);
             if(currentPlayer === "playerX"){
                 squares[index].classList.add('playerX');
                 GAME_STATE[index]="x"
@@ -53,7 +52,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 continue; // Si hay algún valor vacio nadie ha ganado aún
             }
             if (position1 === position2 && position2 === position3)   {
-                document.getElementById("win").textContent="true"; // Si todas las posiciones coinciden entonces, dicho jugador ha ganado la partida
+                if(position1=="x"){
+                    document.getElementById("win").textContent="YOU WIN"; // Si todas las posiciones coinciden entonces, dicho jugador ha ganado la partida
+                }else{
+                    if(position1=="y"){
+                        document.getElementById("win").textContent="SLAYED";
+                    }else{
+                        document.getElementById("win").textContent="Tie";
+                    }
+                }
                 break
             }
         }
