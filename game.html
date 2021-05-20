@@ -3,30 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <script src="./dist/scripts/js/main.js" type="module"></script>
-    <link rel="stylesheet" href="./dist/css/game.min.css">
+    <link rel="stylesheet" href="./dist/css/game.min.css"
 </head>
 <body>
-    <div class="container">
-      <h1>Tic Tac Toe</h1>
-      <div class="game-container">
-        <div class="game-cell"></div>
-        <div class="game-cell"></div>
-        <div class="game-cell"></div>
-        <div class="game-cell"></div>
-        <div class="game-cell"></div>
-        <div class="game-cell"></div>
-        <div class="game-cell"></div>
-        <div class="game-cell"></div>
-        <div class="game-cell"></div>
-      </div>
-      <h2 class="game-notification"></h2>
-      <button class="game-restart">Restablecer</button>    
+    
+    <div class="level_1">
+        
+        <audio autoplay loop>
+            <source src="./dist/audio/forest.mp3" type="audio/mp3">
+        </audio>
+        <div class="background_1">
+            <div class="tictactoe">
+
+                <div class="container">
+                    <div class="game-cell">
+                    </div>
+                    <div class="game-cell">
+                    </div class="game-cell">
+                    <div>
+                    </div class="game-cell">
+                    <div>
+                    </div class="game-cell">
+                    <div>
+                    </div class="game-cell">
+                    <div>
+                    </div>
+                    <div class="game-cell">
+                    </div>
+                    <div class="game-cell">
+                    </div>
+                    <div class="game-cell">
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div  class="hero">
+                <img src="./dist/img/characters/Gothic-hero-Files/GIFS/gothic-hero-idle.gif" class="hero_basic">
+                <img src="./dist/img/Fire.gif" class="lifebar_hero">
+            </div>
+            
+            <div class="villain">
+                <img src="./dist/img/characters/demon-Files/GIFS/demon-idle.gif" class="villain_basic">
+            </div>
+            <div class="monsters_left">
+                <p>Slayed</p>
+                <div class="monsters_left_number">
+                    <p>4</p>
+                </div>
+                
+            </div>
+            
+        </div>
     </div>
-    <script src="index.js"></script>
-  </body>
+    
+</body>
 </html>
