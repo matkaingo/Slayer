@@ -25,18 +25,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
         const event = e.target;
         const index = squareArray.indexOf(event);
         playerDisplay.innerHTML = currentPlayer;
-       
+        var ran= Math.floor(Math.random() * (9 - 0)) + 0;
     
         if(GAME_STATE[index]=="i"){
-            if(currentPlayer === "playerX"){
-                squares[index].classList.add('playerX');
-                GAME_STATE[index]="x"
-                currentPlayer = 'playerO';
-            }else{
-                squares[index].classList.add('playerO');
-                GAME_STATE[index]="o"
-                currentPlayer = "playerX";
+        //if(currentPlayer === "playerX"){
+            squares[index].classList.add('playerX');
+            GAME_STATE[index]="x"
+            currentPlayer = 'playerO';
+        //}else{
+            Verificar();
+
+            while(GAME_STATE[ran]!="i"){
+                ran= Math.floor(Math.random() * (9 - 0)) + 0;
             }
+            squares[ran].classList.add('playerO');
+            GAME_STATE[ran]="o"
+            currentPlayer = "playerX";
+        //}
             Verificar();
         }
     }
