@@ -54,14 +54,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
             if (position1 === position2 && position2 === position3)   {
                 if(position1=="x"){
                     document.getElementById("win").textContent="YOU WIN"; // Si todas las posiciones coinciden entonces, dicho jugador ha ganado la partida
+                    limpiar();
                 }else{
                     if(position1=="y"){
                         document.getElementById("win").textContent="SLAYED";
+                        limpiar();
                     }
                 }
                 break
             }
         }
+        if(GAME_STATE[0]!="i" && GAME_STATE[0]!="i" && GAME_STATE[1]!="i" && GAME_STATE[2]!="i" && GAME_STATE[3]!="i" && GAME_STATE[5]!="i" && GAME_STATE[6]!="i" && GAME_STATE[7]!="i" && GAME_STATE[8]!="i"){
+            document.getElementById("win").textContent="Tie";
+            limpiar();
+        }
+    }
+    function limpiar(){
 
     }
 })
