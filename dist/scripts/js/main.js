@@ -69,8 +69,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
             limpiar();
         }
     }
-    function limpiar(){
 
+    function limpiar(){
+        for(var i =0; GAME_STATE.length;i++){
+            if(GAME_STATE[i]=="x"){
+                squares[i].classList.remove('playerX');
+                GAME_STATE[i]="i";
+            }else{
+                squares[i].classList.remove('playerO');
+                GAME_STATE[i]="i";
+            }
+        }
+        currentPlayer = 'playerX';
     }
 })
 
