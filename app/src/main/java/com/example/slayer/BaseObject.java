@@ -5,7 +5,7 @@ import android.graphics.Rect;
 
 public class BaseObject {
     protected float x, y;
-    private int width, height;
+    protected int width, height;
     protected Rect rect;
     protected Bitmap bm;
 
