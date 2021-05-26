@@ -1,10 +1,12 @@
 package com.example.slayer;
 
 import android.graphics.Bitmap;
+import android.graphics.Rect;
 
 public class BaseObject {
     protected float x, y;
     private int width, height;
+    protected Rect rect;
     protected Bitmap bm;
 
     public BaseObject() {
@@ -55,5 +57,13 @@ public class BaseObject {
 
     public void setBm(Bitmap bm) {
         this.bm = bm;
+    }
+
+    public Rect getRect() {
+        return new Rect((int)this.x, (int)this.y, (int)this.x+this.width, (int)this.y+this.height);
+    }
+
+    public void setRect(Rect rect) {
+        this.rect = rect;
     }
 }
