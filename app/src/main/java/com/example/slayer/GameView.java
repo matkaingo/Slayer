@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -39,5 +40,13 @@ public class GameView extends View {
         super.draw(canvas);
         bird.draw(canvas);
         handler.postDelayed(r, 10);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (event.getAction() == MotionEvent.ACTION_DOWN){
+            bird.setDrop(-15);
+        }
+        return true;
     }
 }

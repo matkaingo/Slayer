@@ -2,6 +2,7 @@ package com.example.slayer;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Matrix;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,7 @@ public class Bird extends BaseObject{
 
     private void drop() {
         this.drop+=0.6;
+        this.y+=this.drop;
     }
 
     public ArrayList<Bitmap> getArrBms() {
@@ -50,6 +52,27 @@ public class Bird extends BaseObject{
             }
             count=0;
         }
+        if (this.drop<0){
+            Matrix matrix = new Matrix();
+            matrix.postRotate(-25);
+            return Bitmap.createBitmap(arrBms.get(idCurrentBitmap),0,0,arrBms.get(idCurrentBitmap).getWidth(), arrBms.get(idCurrentBitmap).getHeight(), matrix, true);
+        }else if (drop>=0){
+            Matrix matrix = new Matrix();
+            if (drop<70){
+                matrix.postRotate(-25+(drop*2));
+            }else{
+                matrix.postRotate(45);
+            }
+            return Bitmap.createBitmap(arrBms.get(idCurrentBitmap),0,0,arrBms.get(idCurrentBitmap).getWidth(), arrBms.get(idCurrentBitmap).getHeight(), matrix, true);
+        }
         return this.arrBms.get(idCurrentBitmap);
+    }
+
+    public float getDrop() {
+        return drop;
+    }
+
+    public void setDrop(float drop) {
+        this.drop = drop;
     }
 }
