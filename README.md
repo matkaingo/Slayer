@@ -8,7 +8,7 @@
   <h3 align="center">Slayer</h3>
 
   <p align="center">
-    Una version de flappy bird con una tematica diferente
+    a flappy bird game with a different vibe
   </p>
 </p>
 
@@ -31,7 +31,6 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
