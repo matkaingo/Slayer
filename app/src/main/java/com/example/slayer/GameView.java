@@ -65,6 +65,18 @@ public class GameView extends View {
     public void draw(Canvas canvas){
         super.draw(canvas);
         bird.draw(canvas);
+        for(int i = 0; i<sumpipe; i++){
+             if(this.arrPipes.get(i).getX() < -arrPipes.get(i).getWidth()){
+                this.arrPipes.get(i).setX(Constants.SCREEN_WIDTH);
+                if(i < sumpipe/2){
+                    arrPipes.get(i).randomY();
+                }else {
+                    arrPipes.get(i).setY(this.arrPipes.get(i-sumpipe/2).getY()
+                            +this.arrPipes.get(i-sumpipe/2).getHeight() + this.distance);
+                }
+             }
+             this.arrPipes.get(i).draw(canvas);
+        }
         handler.postDelayed(r, 10);
     }
 
