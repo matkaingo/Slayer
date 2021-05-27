@@ -9,11 +9,6 @@
 
   <p align="center">
     Una version de flappy bird con una tematica diferente
-
-    <br />
-    <a href="https://github.com/matkaingo/Slayer/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/matekaingoSlayer/issues">Request Feature</a>
   </p>
 </p>
 
