@@ -8,7 +8,7 @@
   <h3 align="center">Slayer</h3>
 
   <p align="center">
-    a flappy bird game with a different vibe
+    Play flappy bird in a nightmarish scenary
   </p>
 </p>
 
@@ -94,10 +94,18 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
+
+<!-- CONTACT -->
+## Contact
+* Mateo Gomez Rios: matkaingo@gmail.com
+* Mateo Manjarrez buitrago
+* Daniel Cadavid
+
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
 * [Gothicvania](https://ansimuz.itch.io/gothicvania-town)
+* [GAll that remains 8-bit](https://www.youtube.com/watch?v=iw4lu3lvcNM)
 
 
 
