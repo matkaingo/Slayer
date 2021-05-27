@@ -5,7 +5,6 @@
 
 
 <!-- PROJECT LOGO -->
-<br />
   <h3 align="center">Slayer</h3>
 
   <p align="center">
