@@ -9,16 +9,12 @@
   <h3 align="center">Slayer</h3>
 
   <p align="center">
-    Una versino de flappy bird con una tematica diferente
+    Una version de flappy bird con una tematica diferente
+
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/matkaingo/Slayer/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/matekaingoSlayer/issues">Request Feature</a>
   </p>
 </p>
 
