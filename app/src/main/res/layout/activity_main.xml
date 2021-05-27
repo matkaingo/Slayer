@@ -4,6 +4,7 @@
     android:background="@drawable/background"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <com.example.slayer.GameView
+        android:id="@+id/gv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     <TextView
@@ -26,6 +27,7 @@
         android:background="#ffffff"
         android:textColor="#000000"/>
     <RelativeLayout
+        android:visibility="invisible"
         android:id="@+id/rl_game_over"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
