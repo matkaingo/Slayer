@@ -94,6 +94,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
+
+<!-- CONTACT -->
+##Contact
+Mateo Gomez Rios: matkaingo@gmail.com
+Mateo Manjarrez buitrago
+Daniel Cadavid
+
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
