@@ -17,8 +17,40 @@ public class GameView extends View {
     private Bird bird;
     private Handler handler;
     private Runnable r;
+    private ArrayList<Pipe> arrPipes;
+    private int sumpipe, distance;
     public GameView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        initBird();
+        initPipe();
+        handler = new Handler();
+        r = new Runnable() {
+            @Override
+            public void run() {
+                invalidate();
+            }
+        };
+    }
+
+    private void initPipe() {
+        sumpipe = 6;
+        distance = 300*Constants.SCREEN_HEIGHT/1920;
+        arrPipes  = new ArrayList<>();
+        for(int i=0; i<sumpipe; i++){
+            if (i<sumpipe/2){
+                this.arrPipes.add(new Pipe(Constants.SCREEN_WIDTH+i*((Constants.SCREEN_WIDTH+200*Constants.SCREEN_WIDTH/1080)/(sumpipe/2)),
+                        0, 200*Constants.SCREEN_WIDTH/1080, Constants.SCREEN_HEIGHT/2));
+                this.arrPipes.get(this.arrPipes.size()-1).setBm(BitmapFactory.decodeResource(this.getResources(), R.drawable.pipe2));
+                this.arrPipes.get(this.arrPipes.size()-1).randomY();
+            }else{
+                this.arrPipes.add(new Pipe(this.arrPipes.get(i-sumpipe/2).getX(), this.arrPipes.get(i-sumpipe/2).getY()
+                +this.arrPipes.get(i-sumpipe/2).getHeight() + this.distance, 200*Constants.SCREEN_WIDTH/1080, Constants.SCREEN_HEIGHT/2));
+                this.arrPipes.get(this.arrPipes.size()-1).setBm(BitmapFactory.decodeResource(this.getResources(), R.drawable.pipe1));
+            }
+        }
+    }
+
+    private void initBird() {
         bird = new Bird();
         bird.setWidth(100*Constants.SCREEN_WIDTH/1080);
         bird.setHeight(100*Constants.SCREEN_HEIGHT/1920);
@@ -28,14 +60,8 @@ public class GameView extends View {
         arrBms.add(BitmapFactory.decodeResource(this.getResources(), R.drawable.bird1));
         arrBms.add(BitmapFactory.decodeResource(this.getResources(), R.drawable.bird2));
         bird.setArrBms(arrBms);
-        handler = new Handler();
-        r = new Runnable() {
-            @Override
-            public void run() {
-                invalidate();
-            }
-        };
     }
+
     public void draw(Canvas canvas){
         super.draw(canvas);
         bird.draw(canvas);
@@ -45,7 +71,7 @@ public class GameView extends View {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN){
-            bird.setDrop(-15);
+            bird.setDrop(-15);  
         }
         return true;
     }
