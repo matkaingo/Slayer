@@ -55,16 +55,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`github_username`, `repo_name`, `twitter_handle`, `email`, `project_title`, `project_description`
-
-
 ### Built With
-
-* [Android-Studio](Android Studio)
-* [Java](Java)
+* [Java](https://www.java.com/en/)
 
 
 
@@ -89,7 +81,7 @@ Download Android Studio
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/matkaingo/Slayer/issues) for a list of proposed features (and known issues).
 
 
 
@@ -123,7 +115,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/matkaingo/Slayer.svg?style=for-the-badge
 [contributors-url]: https://github.com/matkaingo/Slayer/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/matkaingo/Slayer.svg?style=for-the-badge
@@ -135,4 +126,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [license-shield]: https://img.shields.io/github/license/matkaingo/Slayer.svg?style=for-the-badge
 [license-url]: https://github.com/matkaingo/Slayer/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/github_username
+[linkedin-url]: https://www.linkedin.com/in/matkaingo/
