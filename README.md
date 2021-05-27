@@ -8,7 +8,7 @@
   <h3 align="center">Slayer</h3>
 
   <p align="center">
-    a flappy bird game with a different vibe
+    Play flappy bird in a nightmarish scenary
   </p>
 </p>
 
