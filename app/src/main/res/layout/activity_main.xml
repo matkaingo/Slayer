@@ -27,21 +27,117 @@
     <Button
         android:id="@+id/btn_start"
         android:layout_width="match_parent"
-        android:layout_height="686dp"
+        android:layout_height="481dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="45dp"
         android:background="@android:color/transparent"
         android:fontFamily="@font/game"
         android:padding="10dp"
-        android:textAlignment="center"
-        android:textColor="#d9821e"
         android:shadowColor="#000"
         android:shadowDx="-4"
         android:shadowDy="-4"
         android:shadowRadius="1"
         android:text="Start"
+        android:textAlignment="center"
+        android:textColor="#d9821e"
         android:textSize="27sp"
         android:textStyle="bold" />
+
+    <ImageButton
+        android:id="@+id/instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:background="@android:color/transparent"
+        android:rotation="180"
+        android:rotationX="-8"
+        android:translationX="300dp"
+        android:translationY="20dp"
+        app:srcCompat="@drawable/key" />
+
+    <ImageButton
+        android:id="@+id/credits"
+        android:layout_width="70dp"
+        android:layout_height="82dp"
+        android:translationX="330dp"
+        app:srcCompat="@drawable/dev"
+        android:background="@android:color/transparent"/>
+
+    <ImageView
+        android:id="@+id/creditsView"
+        android:layout_width="403dp"
+        android:layout_height="457dp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="false"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        android:contextClickable="false"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/instructions" />
+
+    <ImageView
+        android:id="@+id/instructionsView"
+        android:layout_width="403dp"
+        android:layout_height="457dp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="false"
+        android:baselineAlignBottom="false"
+        android:clickable="true"
+        android:contextClickable="false"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/instructions" />
+
+    <TextView
+        android:id="@+id/txt_instructions"
+        android:layout_width="398dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/game"
+        android:padding="50dp"
+        android:shadowColor="#000"
+        android:shadowDx="-4"
+        android:shadowDy="-4"
+        android:shadowRadius="1"
+        android:text="Keep the skull from touching the towers"
+        android:textAlignment="center"
+        android:textColor="#d9821e"
+        android:textSize="25sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/txt_credits"
+        android:layout_width="398dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/game"
+        android:padding="50dp"
+        android:shadowColor="#000"
+        android:shadowDx="-4"
+        android:shadowDy="-4"
+        android:shadowRadius="1"
+        android:text="Developed by:"
+        android:textAlignment="center"
+        android:textColor="#d9821e"
+        android:textSize="15sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/txt_credits_names"
+        android:layout_width="398dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/game"
+        android:padding="50dp"
+        android:shadowColor="#000"
+        android:shadowDx="-4"
+        android:shadowDy="-4"
+        android:shadowRadius="1"
+        android:text="Mateo Gomez Rios    Mateo Manjarrez    Daniel Cadavid"
+        android:textAlignment="center"
+        android:textColor="#B5F1E7DB"
+        android:textSize="15sp"
+        android:translationY="40dp"
+        android:visibility="invisible" />
 
     <RelativeLayout
         android:id="@+id/rl_game_over"
@@ -51,16 +147,28 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="292dp"
-            android:layout_height="162dp"
+            android:layout_width="320dp"
+            android:layout_height="185dp"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentBottom="false"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="false"
+            android:baselineAlignBottom="false"
+            android:clickable="false"
+            android:contextClickable="false"
             app:srcCompat="@drawable/instructions" />
 
         <TextView
             android:id="@+id/txt_game_over"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="398dp"
+            android:layout_height="230dp"
             android:layout_centerInParent="true"
             android:fontFamily="@font/game"
+            android:padding="50dp"
             android:shadowColor="#000"
             android:shadowDx="-4"
             android:shadowDy="-4"
@@ -68,7 +176,7 @@
             android:text="game over"
             android:textAlignment="center"
             android:textColor="#d9821e"
-            android:textSize="50sp" />
+            android:textSize="40sp" />
 
         <TextView
             android:id="@+id/txt_score_over"
@@ -91,7 +199,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_score_over"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="252dp"
             android:fontFamily="@font/game"
             android:text="best: 0"
             android:textSize="20sp" />
@@ -100,7 +208,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txt_game_over"
-            android:layout_marginTop="176dp"
+            android:layout_marginTop="76dp"
             android:fontFamily="@font/game"
             android:shadowColor="#000"
             android:shadowDx="-4"
