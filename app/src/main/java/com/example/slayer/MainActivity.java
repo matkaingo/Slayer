@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public static TextView txt_score, txt_best_score, txt_score_over, txt_instr, txt_names, txt_dev;
     public static RelativeLayout rl_game_over;
     public static Button btn_start;
-    public static ImageButton instruction, credit, instruction1, credit1;
+    public static ImageButton instruction, credit, instruction1, credit1, music_on, music_off;
     public static ImageView credits, instructions;
     private GameView gv;
     private MediaPlayer mediaPlayer;
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         instructions = findViewById(R.id.instructionsView);
         txt_dev = findViewById(R.id.txt_credits);
         txt_names = findViewById(R.id.txt_credits_names);
+        music_off = findViewById(R.id.music_off);
+        music_on = findViewById(R.id.music_on);
         gv =findViewById(R.id.gv);
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
                 instruction.setVisibility(View.INVISIBLE);
                 credit.setVisibility(View.INVISIBLE);
                 credits.setVisibility(View.INVISIBLE);
+                music_on.setVisibility(View.INVISIBLE);
+                music_off.setVisibility(View.INVISIBLE);
 
             }
         });
@@ -68,6 +72,8 @@ public class MainActivity extends AppCompatActivity {
                 btn_start.setVisibility((View.INVISIBLE));
                 txt_dev.setVisibility(View.VISIBLE);
                 txt_names.setVisibility(View.VISIBLE);
+                music_on.setVisibility(View.INVISIBLE);
+                music_off.setVisibility(View.INVISIBLE);
             }
         });
         credits.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
                 instruction.setVisibility(View.VISIBLE);
                 txt_dev.setVisibility(View.INVISIBLE);
                 txt_names.setVisibility(View.INVISIBLE);
+                music_on.setVisibility(View.VISIBLE);
+                music_off.setVisibility(View.INVISIBLE);
             }
         });
         instruction.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
                 txt_instr.setVisibility(View.VISIBLE);
                 credit.setVisibility(View.INVISIBLE);
                 btn_start.setVisibility((View.INVISIBLE));
+                music_on.setVisibility(View.INVISIBLE);
+                music_off.setVisibility(View.INVISIBLE);
             }
         });
         instructions.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
                 txt_instr.setVisibility(View.INVISIBLE);
                 btn_start.setVisibility((View.VISIBLE));
                 credit.setVisibility(View.VISIBLE);
+                music_on.setVisibility(View.VISIBLE);
+                music_off.setVisibility(View.INVISIBLE);
             }
         });
 
@@ -109,6 +121,8 @@ public class MainActivity extends AppCompatActivity {
                 instruction.setVisibility(View.VISIBLE);
                 credit.setVisibility(View.VISIBLE);
                 rl_game_over.setVisibility(View.INVISIBLE);
+                music_on.setVisibility(View.VISIBLE);
+                music_off.setVisibility(View.INVISIBLE);
                 gv.setStart(false);
                 gv.reset();
             }
@@ -116,6 +130,23 @@ public class MainActivity extends AppCompatActivity {
         mediaPlayer = MediaPlayer.create(this, R.raw.sillychipsong);
         mediaPlayer.setLooping(true);
         mediaPlayer.start();
+
+        music_on.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mediaPlayer.pause();
+                music_on.setVisibility(View.INVISIBLE);
+                music_off.setVisibility(View.VISIBLE);
+            }
+        });
+        music_off.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                music_on.setVisibility(View.VISIBLE);
+                music_off.setVisibility(View.INVISIBLE);
+                mediaPlayer.start();
+            }
+        });
     }
 
     @Override

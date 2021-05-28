@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 import android.os.Handler;
+import android.widget.ImageButton;
 
 public class GameView extends View {
     private Bird bird;
@@ -30,6 +31,7 @@ public class GameView extends View {
     private int soundJump;
     private float volume;
     private boolean loadedsound;
+
     private SoundPool soundPool;
     public GameView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);

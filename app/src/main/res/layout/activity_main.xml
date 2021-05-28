@@ -63,6 +63,25 @@
         app:srcCompat="@drawable/dev"
         android:background="@android:color/transparent"/>
 
+    <ImageButton
+        android:id="@+id/music_on"
+        android:layout_width="57dp"
+        android:layout_height="60dp"
+        android:background="@android:color/transparent"
+        android:translationX="230dp"
+        android:translationY="10dp"
+        app:srcCompat="@drawable/music_on" />
+
+    <ImageButton
+        android:id="@+id/music_off"
+        android:layout_width="64dp"
+        android:layout_height="62dp"
+        android:background="@android:color/transparent"
+        android:translationX="230dp"
+        android:translationY="10dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/music_off" />
+
     <ImageView
         android:id="@+id/creditsView"
         android:layout_width="403dp"
